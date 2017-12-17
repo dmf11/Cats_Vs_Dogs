@@ -1,31 +1,11 @@
-# cnn_dogsvcats.py
-
-# https://www.kaggle.com/c/dogs-vs-cats
-
-# In this .py file, I will create an algorithm to classify wheather images contain either a dog or cat.
-
-# We will be taking in pre-labeled images, feeding them through a Convolutional Neural Network which will 
-# classify the images with a high percentage of accuraccy.
-
-#==============================================================================================================
-
 # Pre-processing
 
-	# Now that we have downloaded the data, we need to process it before we can feed it to our CNN.
-		# This entails:
-			# formatting all images to a standard size
-			# grayscale all images which will help speed up classification
-			# creating a 'one-hot array', the labels cat and dog will not be usefull here for our CNN
+import numpy as np
+import cv2
+import os
 
-
-import numpy as np # - for dealing with np arrays
-#pip install opencv-python
-import cv2 # - for working with images
-import os # - for accessing directories
-
-
-TRAIN_DIR = '/home/david/Documents/Work/PythonStuff/ML/TensorFlow Projects/DogsVCats/Train_Processed/'
-TEST_DIR = '/home/david/Documents/Work/PythonStuff/ML/TensorFlow Projects/DogsVCats/Test_Processed/'
+TRAIN_DIR = '/Train_Processed/'
+TEST_DIR = '/Test_Processed/'
 
 def create_labels(imageName):
 
