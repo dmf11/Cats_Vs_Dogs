@@ -12,6 +12,8 @@ from tqdm import tqdm # - progress bar for tasks added onto loops
 
 IMAGE_H = 50
 IMAGE_W = 50
+TRAIN_DIR = '/TRAIN/'
+TEST_DIR = '/TEST/'
 
 def process_train_data():
 	if(os.path.isdir(TRAIN_PROCESSED) == True):
