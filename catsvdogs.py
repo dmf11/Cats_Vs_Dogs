@@ -88,6 +88,7 @@ def run_catdogCNN():
 	output_df = pd.DataFrame()
 	output_df['ID'] = img_ids
 	output_df['Label'] = labels
+	output_df.set_index('ID')
 	output_df.to_csv('submission.csv')
 
 run_catdogCNN()
